@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "MeetMind AI — Meeting Companion",
+  "version": "1.0.0",
+  "description": "Permission-based meeting captions, live notes, grounded answers and learning questions.",
+  "minimum_chrome_version": "116",
+  "permissions": ["sidePanel", "storage", "activeTab", "scripting", "tabCapture", "offscreen"],
+  "host_permissions": ["http://localhost/*", "http://127.0.0.1/*"],
+  "optional_host_permissions": ["https://*/*"],
+  "action": {"default_title": "Open MeetMind AI"},
+  "background": {"service_worker": "background.js", "type": "module"},
+  "side_panel": {"default_path": "index.html"},
+  "content_security_policy": {"extension_pages": "script-src 'self'; object-src 'self'"}
+}
